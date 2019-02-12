@@ -1,0 +1,24 @@
+# This is the homework 1， which requires us to extract all the numbers from a file and add them together.
+
+# import and read text data
+import re
+hand = open('regex_sum_42.txt')
+
+# create a numlist, an empty set, to plug in all the numbers
+numlist = []
+
+# find out all the numbers and store them in 'extract'.
+# () means extract all the elements inside the parentheses. [0-9]+ means one or more digits.
+for line in hand:
+    line = line.rstrip()
+    extract = re.findall("([0-9]+)", line)
+    
+    # get rid of empty outcome.
+    if len(extract) < 1 : continue
+
+    # change the digits extracted to floating points.
+    for i in range(len(extract)):
+        num = float(extract[i])
+        numlist.append(num)
+
+print(sum(numlist))
