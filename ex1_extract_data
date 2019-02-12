@@ -2,7 +2,7 @@
 
 # import and read text data
 import re
-hand = open('regex_sum_42.txt')
+hand = open('regex_sum_187445.txt')
 
 # create a numlist, an empty set, to plug in all the numbers
 numlist = []
