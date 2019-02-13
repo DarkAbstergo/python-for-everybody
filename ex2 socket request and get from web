@@ -1,6 +1,11 @@
-import socket
+These codes are used to call the socket from python to do the request and get function from the internet.
 
+
+
+# First, import socket function
+import socket
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 # remember that this place you should type in the website name, instead of the name of the file1
 mysock.connect(('data.pr4e.org', 80))
 cmd = 'GET http://data.pr4e.org/intro-short.txt HTTP/1.0\r\n\r\n'.encode()
